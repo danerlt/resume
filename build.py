@@ -12,6 +12,7 @@ Options:
 
 import os
 import yaml
+import json
 import shutil
 import docopt
 import jinja2
@@ -32,11 +33,25 @@ def read_yaml(filename):
         return yaml.load(f)
 
 
+def read_json(filename):
+    with open(filename, 'r', encoding='utf-8') as f:
+        return json.load(f)
+
+
+def read_data(filename):
+    if filename.endswith(".json"):
+        return read_json(filename)
+    elif filename.endswith(".yaml"):
+        return read_yaml(filename)
+    else:
+        raise Exception(f"not support file format for {filename}")
+
+
 def render_template(tpl, vars):
     """
     Render template file with ``vars`` arguments.
     """
-    with open(tpl, 'rt') as f:
+    with open(tpl, 'rt', encoding='utf-8') as f:
         tpl = jinja2.Template(f.read())
 
     return tpl.render(**vars)
@@ -82,7 +97,7 @@ def build(data, config, output_dir):
                                vars)
 
         rendered_file = filename.replace('.jinja2', '.html')
-        with open(os.path.join(output_dir, rendered_file), 'wt') as f:
+        with open(os.path.join(output_dir, rendered_file), 'wt', encoding='utf-8') as f:
             f.write(html)
 
 
@@ -116,7 +131,8 @@ def main():
     output_format = args['--format']
 
     # read resume data and config with some defaults
-    resume_data = read_yaml(args['<resume_file>'])
+    resume_data = read_data(args['<resume_file>'])
+    print(resume_data)
     config = resume_data.get('config', {})
     config.setdefault('output_dir', args['--output_dir'])
     config['theme'] = args['--theme'] or config.get('theme')
@@ -125,6 +141,7 @@ def main():
     # build based on the given format
     cmds = {'html': make_html, 'pdf': make_pdf}
     return cmds[output_format](config, resume_data)
+
 
 if __name__ == '__main__':
     main()
