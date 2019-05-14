@@ -5,9 +5,9 @@
 RESUME ?= resumes/example.yaml
 RSYNC_LOCATION ?= example.com:/var/www/resume/
 
-PYTHON ?= $(shell which python3)
-RSYNC ?= $(shell which rsync)
-RSYNC_ARGS ?= aAXv
+PYTHON ?= python
+RSYNC ?= "$(shell which rsync)"
+RSYNC_ARGS ?= avz
 BUILD_DIR ?= build
 BUILD_ARGS ?= --output_dir $(BUILD_DIR)
 BUILD ?= $(PYTHON) build.py $(BUILD_ARGS)
