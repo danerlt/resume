@@ -1,9 +1,16 @@
 
 # Your resume file
-RESUME ?= resumes/example.yaml
+RESUME ?= resumes/test.json
+
+SSH_ROOT ?= test
+SSH_PORT ?= 22
+SSH_HOST ?= test.com
+REMOTE_PATH ?= /workspace/resume/
 
 # Your rsync upload path
-RSYNC_LOCATION ?= example.com:/var/www/resume/
+RSYNC_LOCATION ?= $(SSH_ROOT)@$(SSH_HOST):$(REMOTE_PATH)
 
 # Here you can also override other variables from Makefile, like BUILD_DIR
 # BUILD_DIR ?= /tmp/my_resume_build
+
+RSYNC_ARGS ?= avz -e 'ssh -p $(SSH_PORT)'
