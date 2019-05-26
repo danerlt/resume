@@ -1,0 +1,107 @@
+{
+  "profile": {
+    "name": "李滔",
+    "label": "Web后端开发工程师",
+    "email": "litao_work@163.com",
+    "phone": "+18723691924",
+    "birth": "11-09-1996",
+    "address": "重庆",
+    "summary": "Web后端开发，Python开发\n",
+    "image": "img/avator.jpg",
+    "website": "https://blog.litao.work",
+    "networks": [
+      {
+        "provider": "github",
+        "username": "danerlt",
+        "url": "https://github.com/danerlt"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "area": "Programming",
+      "skills": [
+        "熟悉Python开发, 熟悉Django框架，熟悉REST ful",
+        "熟悉常用的算法和数据结构",
+        "熟悉多进程多线程",
+        "熟悉Linux，Bash",
+        "掌握Java开发, 了解Spring框架",
+        "了解微服务架构，了解thrift框架",
+        "了解常用前端技术HTML、CSS、JavaScript",
+        "掌握 Scrapy，Selenium等爬虫框架"
+      ]
+    },
+    {
+      "area": "Technology",
+      "skills": [
+        "熟悉Git flow",
+        "熟练使用MySQL",
+        "了解Redis",
+        "了解MongoDB",
+        "了解Docker"
+      ]
+    }
+  ],
+  "work": [
+    {
+      "company": "上海爱数信息技术股份有限公司",
+      "role": "Python 开发工程师",
+      "website": "https://www.eisoo.com/",
+      "date": "2018.07 - 至今",
+      "summary": "Python后端开发，负责部分Python服务",
+      "highlights": [
+        "AnyBackup是一款全生命周期的灾备管理软件，其中Web服务是通过Django搭建的微服务架构",
+        "实现一个Python服务，实现业务逻辑，为前端提供REST API接口，为其他Python服务提供Thrift接口，通过内部实现的EPMS框架和C++通信。\n",
+        "将Python框架和各个应用模块代码解耦，提高了应用部门的开发效率",
+        "将Python服务异常模块优化，使bug排查更加清晰"
+      ]
+    },
+    {
+      "company": "重庆市城市建设委员会开发办公室",
+      "role": "技术支持实习",
+      "date": "2017.12 - 2018.03",
+      "website": "",
+      "highlights": [
+        "负责单位OA系统的维护\n",
+        "对接单位OA系统和开发公司的开发\n"
+      ]
+    },
+    {
+      "company": "爱奇艺重庆分公司",
+      "role": "运维实习生",
+      "date": "2017.08 - 2017.11",
+      "website": "",
+      "summary": "负责公司内部开发的装机平台的维护\n",
+      "highlights": [
+        "负责公司内部开发的装机平台的维护\n",
+        "对自动装机失败的机器手动配置配置服务器参数\n",
+        "使用Python爬取装机平台的数据"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "attend(个人项目)",
+      "role": "全栈开发",
+      "website": "https://github.com/danerlt/attend",
+      "date": "2017-04 - 2017-05",
+      "summary": "基于JSP+Servlet+JDBC+MySQL+Bootstrap搭建的一个简单的考勤系统",
+      "highlights": [
+      ]
+    }
+  ],
+  "education": [
+    {
+      "location": "重庆工商大学",
+      "date": "2014.09-2018.06",
+      "summary": "计算机科学与技术"
+    }
+  ],
+  "interests": [
+  ],
+  "config": {
+    "theme": "simple-cn",
+    "github_source": "https://github.com/danerlt/resume",
+    "pdf_file": "Sebastian_Hanula_Resume.pdf"
+  }
+}
